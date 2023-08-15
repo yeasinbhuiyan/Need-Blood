@@ -1,0 +1,17 @@
+.slider {
+    margin: 0;
+    padding: 0;
+}
+.slider img {
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .slider img{
+        height: 150px; 
+    }
+}
