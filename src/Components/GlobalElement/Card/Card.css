@@ -1,0 +1,21 @@
+
+
+.btn-primary{
+    background-color: rgb(203, 15, 15);
+    
+    padding: 5px 8px;
+    color: rgb(253, 250, 250);
+    border-radius: 6px;
+    
+}
+
+.btn-primary:hover{
+    background-color: rgb(255, 69, 69);
+}
+.card{
+
+    border-radius: 5px;
+}
+.card:hover{
+
+}
