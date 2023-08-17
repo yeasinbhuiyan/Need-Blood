@@ -3,6 +3,7 @@ import Home from "../Page/Home/Home";
 import About from "../Page/About/About";
 import Contact from "../Page/Contact/Contact";
 import MainLayout from "../Layout/MainLayout/MainLayout";
+import AllDonors from "../Page/AllDonors/AllDonors";
 
 
 
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
             {
                 path :'/contact',
                 element : <Contact/>
+            },{
+                path: '/allDonors',
+                element : <AllDonors/>
             }
         ]
     }

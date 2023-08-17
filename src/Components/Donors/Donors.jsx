@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Card from "../GlobalElement/Card/Card";
 import SectionTitle from "../GlobalElement/SectionTitle/SectionTitle";
+import { Link } from "react-router-dom";
 
-const AllDonors = () => {
+const Donors = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
+    // const [isOpen, setIsOpen] = useState(false)
     const [donors, setDonors] = useState([])
 
 
@@ -22,9 +23,9 @@ const AllDonors = () => {
                 {
                     donors &&
 
-                        isOpen ?
-                        donors.map(donarDetails => <Card key={donarDetails._id} donarDetails={donarDetails}></Card>)
-                        :
+                        // isOpen ?
+                        // donors.map(donarDetails => <Card key={donarDetails._id} donarDetails={donarDetails}></Card>)
+                        // :
                         donors.slice(0, 8).map(donarDetails => <Card key={donarDetails._id} donarDetails={donarDetails}></Card>)
                 }
 
@@ -32,13 +33,12 @@ const AllDonors = () => {
             
             <div className="w-full text-center my-28">
 
-                {
-                    !isOpen && <button onClick={() => setIsOpen(true)} className="btn btn-error">See All</button>
-                }
+               <Link to={'/allDonors'}> <button className="btn btn-error">See All</button></Link>
+                
 
             </div>
         </div>
     );
 };
 
-export default AllDonors;
+export default Donors;

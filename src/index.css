@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 .text-red{
-    color: rgb(216, 18, 18);
+    color: rgb(237, 10, 10);
 }
 
 .bg-red{
-    background-color: rgb(216, 18, 18);
+    background-color: rgb(237, 10, 10);
+}
+
+.bg-primary{
+    background-color: rgb(237, 10, 10);
 }
