@@ -4,6 +4,7 @@ import About from "../Page/About/About";
 import Contact from "../Page/Contact/Contact";
 import MainLayout from "../Layout/MainLayout/MainLayout";
 import AllDonors from "../Page/AllDonors/AllDonors";
+import DonorDetails from "../Page/DonorDetails/DonorDetails";
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             },{
                 path: '/allDonors',
                 element : <AllDonors/>
+            },
+            {
+                path : '/donorDetails/:id',
+                element : <DonorDetails/>
             }
         ]
     }

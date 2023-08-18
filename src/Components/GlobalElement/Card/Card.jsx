@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import './Card.css'
 // eslint-disable-next-line react/prop-types
 const Card = ({ donarDetails }) => {
 
-    const { name, group, given_times, img } = donarDetails
+    const { name, group, given_times, img , _id } = donarDetails
 
     return (
 
@@ -12,7 +13,7 @@ const Card = ({ donarDetails }) => {
                 <h2 className="card-title">{name}</h2>
                 <h4>{given_times}</h4>
                 <div className="card-actions justify-end">
-                    <button className="btn-primary">See Details</button>
+                   <Link to={`/donorDetails/${_id}`}> <button className="btn-primary">See Details</button></Link>
                 </div>
             </div>
         </div>
