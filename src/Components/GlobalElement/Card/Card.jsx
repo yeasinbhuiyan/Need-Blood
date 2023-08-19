@@ -13,7 +13,7 @@ const Card = ({ donarDetails }) => {
                 <h2 className="card-title">{name}</h2>
                 <h4>{given_times}</h4>
                 <div className="card-actions justify-end">
-                   <Link to={`/donorDetails/${_id}`}> <button className="btn-primary">See Details</button></Link>
+                   <Link to={`/donorDetails/${_id}`}> <button className="primary-btn">See Details</button></Link>
                 </div>
             </div>
         </div>

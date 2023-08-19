@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .text-red{
-    color: rgb(237, 10, 10);
+    color: #ed193b;
 }
 
 .bg-red{
-    background-color: rgb(237, 10, 10);
+    background-color: #ed193b;
 }
 
 .bg-primary{
-    background-color: rgb(237, 10, 10);
+    background-color: #ed193b;
 }

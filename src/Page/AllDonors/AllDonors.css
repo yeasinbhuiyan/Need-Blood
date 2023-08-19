@@ -1,0 +1,57 @@
+.selector {
+    /* overflow: hidden !important; */
+    overflow: scroll !important;
+
+}
+
+
+/* Apply styles to the select element */
+.selector {
+    margin-left: 3%;
+    padding: 8px;
+    border: 1px solid #dd062a;
+    color: #ed193b;
+    border-radius: 4px;
+    font-size: 16px;
+    /* background-color: #ed193b; */
+    cursor: pointer;
+  }
+  
+  /* Style the options within the dropdown */
+  .selector option {
+    font-size: 16px;
+    color: #333;
+}
+
+  
+  /* Change the appearance of the dropdown arrow */
+  .selector::-ms-expand {
+    display: none;
+  }
+  
+  /* Apply primary color to the border and arrow */
+  .selector:focus {
+    border-color: #ed193b;
+    /* background-color: #ed193b; */
+  }
+
+
+  
+  /* Apply primary color to the dropdown arrow */
+  .selector:after {
+    content: '\25BC';
+    
+    color: #ed193b;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .selector option:hover {
+    background-color: #ed193b;
+    color: white;
+  }
+

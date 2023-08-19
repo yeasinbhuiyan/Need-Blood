@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "../GlobalElement/Card/Card";
 import SectionTitle from "../GlobalElement/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
+import './Donors.css'
 
 const Donors = () => {
 
@@ -31,9 +32,9 @@ const Donors = () => {
 
             </div>
             
-            <div className="w-full text-center my-28">
+            <div className="w-full text-center my-10">
 
-               <Link to={'/allDonors'}> <button className="btn btn-error">See All</button></Link>
+               <Link to={'/allDonors'}> <button className="all-btn"><span>See All</span></button></Link>
                 
 
             </div>
