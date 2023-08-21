@@ -1,0 +1,3 @@
+.odd-reverse:nth-child(odd){
+flex-direction: row-reverse;
+}
