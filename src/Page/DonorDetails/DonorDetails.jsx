@@ -52,23 +52,12 @@ const DonorDetails = () => {
                     {
                         donation_details && donation_details.map(details => (<>
 
-                            {/* <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure><img className='md:w-12/6 h-[100%]' src={details.img} alt="Album" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">{details.name}</h2>
-                <p>{details.description}</p>
-                <div className="card-actions justify-end">
-                    <button className='primary-btn'>See More</button>
-                </div>
-            </div>
-        </div> */}
 
-
-                            <div className='flex odd-reverse flex-col md:flex-row items-center justify-between gap-5 px-9'>
-                                <div>
-                                    <img className='w-full h-96' src={details.img} alt="" />
+                            <div className='flex pt-32 md:pt-16 odd-reverse flex-col md:flex-row items-center justify-between gap-5 md:gap-10 lg:gap-40 px-9'>
+                                <div className='md:w-1/2'>
+                                    <img className='w-full md:h-96 h-64' src={details.img} alt="" />
                                 </div>
-                                <div>
+                                <div className='md:w-1/2'>
                                     <h2 className='text-3xl font-semibold'>{details.hospital}</h2>
                                     <p>{details.description}</p>
                                 </div>

@@ -1,3 +1,15 @@
 .odd-reverse:nth-child(odd){
 flex-direction: row-reverse;
 }
+
+
+/* 767 */
+
+@media (max-width: 767px) {
+    .odd-reverse:nth-child(odd){
+        flex-direction: column;
+        /* margin-top: 40px; */
+
+ }
+ 
+  }
