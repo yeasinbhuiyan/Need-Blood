@@ -10,28 +10,29 @@ import DonorDetails from "../Page/DonorDetails/DonorDetails";
 
 const router = createBrowserRouter([
     {
-        path : '/',
-        element : <MainLayout/>,
-        children : [
+        path: '/',
+        element: <MainLayout />,
+        children: [
             {
                 path: '/',
-                element : <Home/>,
+                element: <Home />,
             },
             {
                 path: '/about',
-                element: <About/>
+                element: <About />
             },
             {
-                path :'/contact',
-                element : <Contact/>
-            },{
+                path: '/contact',
+                element: <Contact />
+            }, {
                 path: '/allDonors',
-                element : <AllDonors/>
+                element: <AllDonors />
             },
             {
-                path : '/donorDetails/:id',
-                element : <DonorDetails/>
+                path: '/donorDetails/:id',
+                element: <DonorDetails />
             }
+
         ]
     }
 ])

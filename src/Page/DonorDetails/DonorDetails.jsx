@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { AiFillFacebook, AiFillTwitterSquare, AiOutlineLink } from 'react-icons/ai';
+import { FiInstagram, } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa';
 import './DonorDetails.css'
 
 const DonorDetails = () => {
     const [donorDetails, setDonorDetails] = useState({})
 
-    const { description, name, _id, location, given_times, img, hemoglobin, gender, donation_details } = donorDetails
+    const { description, name, _id, location, given_times, img, hemoglobin, gender, donation_details, facebook, instragram, website, twitter, linkedin } = donorDetails
 
     const { id } = useParams()
     console.log(id);
@@ -24,11 +27,11 @@ const DonorDetails = () => {
     return (
         <>
             <div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 md:py-20 p-10 mx-auto'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 md:py-20 p-10 py-20 mx-auto'>
 
 
                     <div className='mx-auto p-5 md:p-0'>
-                        <img className='w-96 h-full rounded' src={img} alt="" />
+                        <img className='w-11/12 h-full rounded' src={img} alt="" />
 
                     </div>
 
@@ -43,7 +46,22 @@ const DonorDetails = () => {
                         <p className='my-5'><span className=' text-xl font-semibold'>Given Times:</span><span className='text-xl font-bold ms-2'>{given_times}</span></p>
                         <p className='my-5'><span className=' text-xl font-semibold'>Gender:</span><span className='text-xl font-bold ms-2'>{gender}</span></p>
 
+
                         {/* <p className='flex items-center'><FaThumbsUp className='text-info'></FaThumbsUp><span className='ms-2 font-semibold'>{chef.likes}</span></p> */}
+
+
+                        <p className='flex gap-6 items-center '>
+                            <a href={facebook} target='_blank'><AiFillFacebook className='text-2xl' /></a>
+                            <a href={instragram} target='_blank'><FiInstagram className='text-2xl' /></a>
+                            <a href={twitter} target='_blank'> <AiFillTwitterSquare className='text-2xl' /></a>
+                            <a href={linkedin} target='_blank'> <FaLinkedin className='text-2xl' /></a>
+                            <a href={website} target='_blank'>  <AiOutlineLink className='text-2xl' /></a>
+
+
+
+
+
+                        </p>
                     </div>
                 </div>
 
