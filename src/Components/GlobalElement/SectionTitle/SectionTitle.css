@@ -1,0 +1,7 @@
+.title-gradient {
+    color: #ed193b;
+    background: linear-gradient(to right, #ed193b 50%, #e6e65b );
+    /* opacity: 90%; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

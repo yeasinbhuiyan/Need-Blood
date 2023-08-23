@@ -4,9 +4,8 @@
     
     padding: 5px 8px;
     color: rgb(253, 250, 250);
-    border-radius: 6px;
-
-    
+    border-radius: 2px;
+    font-size: small; 
 }
 
 .primary-btn:hover{
