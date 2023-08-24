@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
     return (
-        <div>
-            <div className="navbar z-10 bg-black text-gray-500 bg-opacity-40 fixed">
+        <div className=" pb-20 md:pb-16">
+            <div className="navbar z-20 bg-white shadow-md text-gray-500  fixed">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -5,6 +5,7 @@ import Contact from "../Page/Contact/Contact";
 import MainLayout from "../Layout/MainLayout/MainLayout";
 import AllDonors from "../Page/AllDonors/AllDonors";
 import DonorDetails from "../Page/DonorDetails/DonorDetails";
+import BecomeDoror from "../Page/Home/DonationConfusion/BecomeDonor/BecomeDoror";
 
 
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: '/donorDetails/:id',
                 element: <DonorDetails />
+            },
+            {
+                path : '/becomeDonor',
+                element : <BecomeDoror/>
             }
 
         ]
