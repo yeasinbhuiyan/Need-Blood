@@ -39,7 +39,7 @@ const DonationConfusion = () => {
 
                     </div>
                     <div className="relative" >
-                        <Link > <button className="bottom-0 py-2 px-3 bg-red hover:bg-black absolute text-gray-200 w-full font-semibold text-center">Read More</button></Link>
+                        <Link to={'/giveBlood'}> <button className="bottom-0 py-2 px-3 bg-red hover:bg-black absolute text-gray-200 w-full font-semibold text-center">Read More</button></Link>
                     </div>
 
                 </div>
