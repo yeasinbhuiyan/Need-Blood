@@ -8,8 +8,8 @@ import './BasicRecuirments.css'
 
 const BasicRecuirments = () => {
     return (
-        <div className='py-48 basic-recuirment'>
-            <h1 className='md:text-3xl text-center text-xl font-semibold w-full '>Basic Recuirements & Recommendations</h1>
+        <div className='py-36 mt-20 basic-recuirment'>
+            <h1 className='md:text-4xl text-center text-2xl  w-full font-bold'>Basic Recuirements & Recommendations</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-44 md:gap-40 gap-32 text-center px-20 py-20'>
                 <div className='flex items-center flex-col'>
