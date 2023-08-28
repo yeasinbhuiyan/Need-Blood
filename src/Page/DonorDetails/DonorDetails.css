@@ -9,7 +9,6 @@ flex-direction: row-reverse;
     .odd-reverse:nth-child(odd){
         flex-direction: column;
 
-
  }
  
   }
