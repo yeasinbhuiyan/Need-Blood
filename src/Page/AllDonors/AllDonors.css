@@ -55,3 +55,13 @@
     color: white;
   }
 
+
+  .modifiedSelect{
+    background-color: #EBECF0;
+    border-radius: 2em;
+    color: #172B4D;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+  }
+

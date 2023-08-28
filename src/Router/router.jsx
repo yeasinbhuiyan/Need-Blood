@@ -7,6 +7,7 @@ import AllDonors from "../Page/AllDonors/AllDonors";
 import DonorDetails from "../Page/DonorDetails/DonorDetails";
 import BecomeDoror from "../Page/Home/DonationConfusion/BecomeDonor/BecomeDoror";
 import GiveBlood from "../Page/Home/DonationConfusion/GiveBlood/GiveBlood";
+import DonationHelps from "../Page/Home/DonationConfusion/DonationHelps/DonationHelps";
 
 
 
@@ -35,12 +36,17 @@ const router = createBrowserRouter([
                 element: <DonorDetails />
             },
             {
-                path : '/becomeDonor',
-                element : <BecomeDoror/>
+                path: '/becomeDonor',
+                element: <BecomeDoror />
             },
             {
-                path : '/giveBlood',
-                element: <GiveBlood/>
+                path: '/giveBlood',
+                element: <GiveBlood />
+            },
+            {
+                path: '/donationHelps',
+                element: <DonationHelps />
+
             }
 
         ]

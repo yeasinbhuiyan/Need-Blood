@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import SectionTitle from "../../Components/GlobalElement/SectionTitle/SectionTitle";
 import Card from "../../Components/GlobalElement/Card/Card";
@@ -79,13 +80,25 @@ const AllDonors = () => {
             .then(res => res.json())
             .then(data => setDonors(data))
     }, [])
+
+
+    const modifiedSelect = {
+        // backgroundColor: '#EBECF0',
+        borderRadius: '2em',
+        color: '#172B4D',
+        display: 'inline-block',
+        fontSize: 12,
+        minWidth: 1,
+        padding: '5px',
+        textAlign: 'center',
+    };
     return (
         <div className="py-16">
 
 
             <SectionTitle heading={"  Our All Donors "} />
 
-            <select className="selector md:p-1" name="cars" id="cars">
+            <select className="selector md:p-1 modifiedSelect" name="cars" id="cars">
                 {
                     districts.map(district => (<option className="option_data" key={district.name} value={district.name}>
                         {district.name}</option>))
