@@ -3,22 +3,23 @@ import { BsFillHeartPulseFill } from 'react-icons/bs';
 import FactModal from './FactModal/FactModal';
 
 const FactAbout = () => {
-    const [factAbout, setFactAbout] = useState(false)
+    const [factAbout, setFactAbout] = useState()
     const onFactModal = () => {
-        setFactAbout(true)
+        setFactAbout('on')
+        document.body.style.overflow = 'hidden'
     }
     return (
 
 
 
-        <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-between px-10 my-40'>
+        <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-between px-10 my-40 mx-auto md:gap-0 gap-32 '>
 
 
             {
                 factAbout && <FactModal factAbout={factAbout} setFactAbout={setFactAbout} />
             }
 
-            <div className='space-y-10'>
+            <div className='space-y-10 mx-auto'>
                 <h2 className='text-4xl font-semibold text-red'>Facts About Blood Needs <br /> in Bangladesh</h2>
 
                 <p className='font-semibold text-gray-600 flex gap-5'> <BsFillHeartPulseFill className='text-7xl text-red ' />
@@ -34,11 +35,13 @@ const FactAbout = () => {
             </div>
 
 
-            <div className='space-y-10'>
+            <div className='space-y-10 mx-auto'>
                 <h2 className='text-4xl font-semibold text-red'>What Happens To Donated Blood ?</h2>
 
-                <p className='font-semibold text-gray-600 flex gap-5'> <BsFillHeartPulseFill className='text-7xl text-red' />
-                    <p className='flex flex-col gap-2 w-2/3'>
+                <p className='font-semibold text-gray-600 flex gap-5'>
+
+                    {/* <BsFillHeartPulseFill className='text-7xl text-red' /> */}
+                    <p className='flex flex-col gap-2 w-11/12'>
 
                         <p>Have you ever paused to ponder the fate of the precious blood you generously donate in support of those in need? Prepare to be enlightened
                         </p>
