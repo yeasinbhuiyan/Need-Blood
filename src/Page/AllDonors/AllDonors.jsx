@@ -8,8 +8,10 @@ import './AllDonors.css'
 
 const AllDonors = () => {
     const [donors, setDonors] = useState([])
+    const [selectValue , setSelectValue] = useState('All')
 
     const districts = [
+        { "name": "All" },
         { "name": "Bagerhat" },
         { "name": "Bandarban" },
         { "name": "Barguna" },
@@ -78,27 +80,53 @@ const AllDonors = () => {
     useEffect(() => {
         fetch('/Donors.json')
             .then(res => res.json())
-            .then(data => setDonors(data))
-    }, [])
+            .then(data => {
+
+                const result = data.filter(df=> df.district == selectValue)
+                // const allResult = data.filter(df=> df.district == 'All')
+
+                // console.log(result , 'result')
+                console.log(result, data, selectValue);
+              
+                if(result.length > 0 ){
+                    console.log('select')
+                    setDonors(result)
+                }
+                else if( selectValue == 'All'){
+                    setDonors(data)
+                }
+                else{
+                    console.log('not found')
+                    const notFound = document.getElementById('notFound')
+                    if (notFound) {
+                        notFound.style.display = 'flex'
+                    }
+                    //  
+                    setDonors([])
+                  
+
+                }
+                // console.log(data ,selectValue)
+            })
+    }, [selectValue])
 
 
-    const modifiedSelect = {
-        // backgroundColor: '#EBECF0',
-        borderRadius: '2em',
-        color: '#172B4D',
-        display: 'inline-block',
-        fontSize: 12,
-        minWidth: 1,
-        padding: '5px',
-        textAlign: 'center',
-    };
+
+    const handleSelectValue=(value)=>{
+    setSelectValue(value)
+
+    }
+
+
+    const notFound = document.getElementById('notFound')
+//    notFound.style.display = 'none'
     return (
         <div className="py-16">
 
 
             <SectionTitle heading={"  Our All Donors "} />
 
-            <select className="selector md:p-1 modifiedSelect" name="cars" id="cars">
+            <select onChange={(e)=>handleSelectValue(e.target.value)} className="selector md:p-1  modifiedSelect" name="cars" id="cars">
                 {
                     districts.map(district => (<option className="option_data" key={district.name} value={district.name}>
                         {district.name}</option>))
@@ -106,7 +134,7 @@ const AllDonors = () => {
             </select>
 
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  mx-auto gap-10 px-10 my-10">
+            <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  mx-auto gap-10 px-10 my-10">
 
                 <div className="card w-full text-center flex items-center justify-center bg-base-100 shadow-xl group">
                     <AiOutlinePlus className="w-[60%] h-[60%] text-red" />
@@ -116,6 +144,7 @@ const AllDonors = () => {
 
                     donors.map(donarDetails => <Card key={donarDetails._id} donarDetails={donarDetails}></Card>)
                 }
+               {donors.length < 1 && <p id="notFound" className="text-center  font-7xl text-red-600 font-semibold">Not Found</p>}
 
             </div>
 

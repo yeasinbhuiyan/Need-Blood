@@ -14,6 +14,7 @@
         "twitter": "https://www.facebook.com/Y.arafat.bhuiyan/",
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
+        "district": "Feni",
 
         "donation_details" : [
             {
@@ -90,6 +91,8 @@
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
         "gender": "Male" ,
+        "district": "Feni",
+
         "donation_details" : [
             {
                 "location": "Feni,Bangladesh",
@@ -164,6 +167,7 @@
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
         "gender": "Male",
+        "district": "Feni",
         "donation_details" : [
             {
                 "location": "Feni,Bangladesh",
@@ -238,6 +242,7 @@
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
         "gender": "Male",
+        "district": "Dhaka",
         "donation_details" : [
             {
                 "location": "Feni,Bangladesh",
@@ -312,6 +317,7 @@
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
         "gender": "Male",
+        "district": "Dhaka",
         "donation_details" : [
             {
                 "location": "Feni,Bangladesh",
@@ -386,6 +392,7 @@
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
         "gender": "Male",
+        "district": "Bogura",
         "donation_details" : [
             {
                 "location": "Feni,Bangladesh",
@@ -460,6 +467,7 @@
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
         "gender": "Male",
+        "district": "Bogura",
         "donation_details" : [
             {
                 "location": "Feni,Bangladesh",
@@ -533,7 +541,8 @@
         "twitter": "https://www.facebook.com/Y.arafat.bhuiyan/",
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
-        "gender": "Male" 
+        "gender": "Male" ,
+        "district": "Bogura"
     },
     {
         "_id" : 8,
@@ -549,7 +558,8 @@
         "twitter": "https://www.facebook.com/Y.arafat.bhuiyan/",
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
-        "gender": "Male" 
+        "gender": "Male" ,
+        "district": "Sylhet"
     },
     {
         "_id" : 9,
@@ -565,7 +575,8 @@
         "twitter": "https://www.facebook.com/Y.arafat.bhuiyan/",
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
-        "gender": "Male" 
+        "gender": "Male" ,
+        "district": "Sylhet"
     },
     {
         "_id" : 10,
@@ -581,7 +592,8 @@
         "twitter": "https://www.facebook.com/Y.arafat.bhuiyan/",
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
-        "gender": "Male" 
+        "gender": "Male" ,
+        "district": "Sylhet"
     },
     {
         "_id" : 11,
@@ -597,6 +609,7 @@
         "twitter": "https://www.facebook.com/Y.arafat.bhuiyan/",
         "website": "https://yeasin-bhuiyan.netlify.app/",
         "linkedin" : "https://yeasin-bhuiyan.netlify.app/",
-        "gender": "Male" 
+        "gender": "Male" ,
+        "district": "Sylhet"
     }
 ]
