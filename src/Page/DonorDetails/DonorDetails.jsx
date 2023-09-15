@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { AiFillFacebook, AiFillTwitterSquare, AiOutlineLink } from 'react-icons/ai';
+import { AiFillFacebook, AiFillPhone, AiFillTwitterSquare, AiOutlineLink } from 'react-icons/ai';
 import { FiInstagram, } from 'react-icons/fi';
 import { FaLinkedin } from 'react-icons/fa';
 import './DonorDetails.css'
@@ -8,8 +8,7 @@ import './DonorDetails.css'
 const DonorDetails = () => {
     const [donorDetails, setDonorDetails] = useState({})
 
-    const { description, name, _id, location, given_times, img, hemoglobin, gender, donation_details, facebook, instragram, website, twitter, linkedin } = donorDetails
-
+    const { description, name,_id, phone, location, given_times, img, hemoglobin, gender, donation_details, facebook, instragram, website, twitter, linkedin } = donorDetails
     const { id } = useParams()
     console.log(id);
 
@@ -22,7 +21,15 @@ const DonorDetails = () => {
 
             })
     }, [])
-    console.log(donation_details)
+    // console.log(donation_details)
+
+
+    // for phone number 
+    // const handleCall=(event)=> {
+    //     event.preventDefault();
+    //     const phoneNumber = document.querySelector('.phone-number').textContent;
+    //     window.location.href = `tel:${phoneNumber}`;
+    //   }
 
     return (
         <>
@@ -45,8 +52,9 @@ const DonorDetails = () => {
                         <p className='my-5'><span className=' text-xl font-semibold'>Hemoglobin:</span><span className='text-xl font-bold ms-2'>{hemoglobin} g/dL</span></p>
                         <p className='my-5'><span className=' text-xl font-semibold'>Given Times:</span><span className='text-xl font-bold ms-2'>{given_times}</span></p>
                         <p className='my-5'><span className=' text-xl font-semibold'>Gender:</span><span className='text-xl font-bold ms-2'>{gender}</span></p>
-
-
+                     
+                        {/* <p className='my-5'><span className=' text-xl font-semibold'>Phone: </span><span className='text-xl font-bold ms-2 phone-number'>{parseInt(`${phone}`)}</span></p> */}
+                        {/* <p><span className="phone-number">123-456-7890</span></p> */}
                         {/* <p className='flex items-center'><FaThumbsUp className='text-info'></FaThumbsUp><span className='ms-2 font-semibold'>{chef.likes}</span></p> */}
 
 
@@ -56,6 +64,7 @@ const DonorDetails = () => {
                             <a href={twitter} target='_blank'> <AiFillTwitterSquare className='text-2xl' /></a>
                             <a href={linkedin} target='_blank'> <FaLinkedin className='text-2xl' /></a>
                             <a href={website} target='_blank'>  <AiOutlineLink className='text-2xl' /></a>
+                            {/* <a href="#" onClick={handleCall} target='_blank'>  <AiFillPhone className='text-2xl' /></a> */}
 
 
 

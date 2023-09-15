@@ -136,9 +136,10 @@ const AllDonors = () => {
 
             <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  mx-auto gap-10 px-10 my-10">
 
-                <div className="card w-full text-center flex items-center justify-center bg-base-100 shadow-xl group">
-                    <AiOutlinePlus className="w-[60%] h-[60%] text-red" />
+                <div className="card  w-full text-center flex items-center justify-center bg-base-100 shadow-xl group">
+                    <AiOutlinePlus className="cursor-pointer w-[60%] h-[60%] text-red" />
                 </div>
+                
                 {
                     donors &&
 
