@@ -1,0 +1,76 @@
+.group_table table {
+   width: 100%;
+   margin: 0 auto;
+}
+
+.donors_recuirment{
+    width: 50%;
+    margin: 20px auto;
+    border-left: 4px solid red;
+    border-right: 4px solid red;
+ }
+.table_head{
+   
+        color: #f7eacefa;
+        /* color: #3b023a; */
+        background: linear-gradient(to right, #ed193b 50%, #ffcd07 );
+        /* opacity: 90%; */
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+    
+}
+
+
+.group_table table thead tr th{
+  
+    
+    color: #000;;
+    padding: 12px;
+    text-align: start;
+    /* justify-content: flex-start; */
+
+}
+
+.group_table table tbody tr {
+font-weight: 600;
+color: #000;
+
+
+}
+.group_table table tbody tr:hover {
+    background-color: #fcef8f;
+    border: 2px solid #ee935b;
+cursor: pointer;
+    }
+
+.group_table table tbody tr:nth-child(2){
+    /* background-color: #ff0b33; */
+    background-color: rgb(255, 189, 189);
+
+
+}
+.group_table table tbody tr:nth-child(4){
+    /* background-color: #ff0b33; */
+    background-color: rgb(255, 189, 189);
+
+
+}
+.group_table table tbody tr:nth-child(6){
+    /* background-color: #ff0b33; */
+    background-color: rgb(255, 189, 189);
+
+
+}
+.group_table table tbody tr:nth-child(8){
+    /* background-color: #ff0b33; */
+    background-color: rgb(255, 189, 189);
+
+
+}
+.group_table table tbody tr td{
+ 
+    padding: 10px;
+    /* text-align: center; */
+
+
+} 

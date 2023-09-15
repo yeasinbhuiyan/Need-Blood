@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavigationBar = () => {
     return (
@@ -11,7 +11,10 @@ const NavigationBar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                                <Link>All Donors</Link>
+                                <NavLink to={'/'} className={({ isActive }) => isActive ? 'text-red' : ''}>Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'allDonors'} className={({ isActive }) => isActive ? 'text-red font-semibold' : ''}>All Donors</NavLink>
                             </li>
                             <li>
                                 <a>Parent</a>
@@ -23,12 +26,15 @@ const NavigationBar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                <Link to={'/'}>    <span className="text-pink-700 text-3xl font-semibold">Need-Blood</span><span className="text-white text-xl">.com</span></Link>
+                    <Link to={'/'}>    <span className="text-pink-700 text-3xl font-semibold">Need-Blood</span><span className="text-white text-xl">.com</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu  menu-horizontal px-1">
                         <li>
-                            <Link to={'/allDonors'}>All Donors</Link>
+                            <NavLink to={'/'} className={({ isActive }) => isActive ? 'text-red font-semibold' : ''}>Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/allDonors'} className={({ isActive }) => isActive ? 'text-red font-semibold' : ''}>All Donors</NavLink>
                         </li>
                         <li tabIndex={0}>
                             <details>

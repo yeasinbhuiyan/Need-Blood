@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root{
+    --red-color : #ed193b;
+}
 .text-red{
     color: #ed193b;
 }
