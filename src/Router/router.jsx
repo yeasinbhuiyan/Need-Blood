@@ -8,6 +8,10 @@ import DonorDetails from "../Page/DonorDetails/DonorDetails";
 import BecomeDoror from "../Page/Home/DonationConfusion/BecomeDonor/BecomeDoror";
 import GiveBlood from "../Page/Home/DonationConfusion/GiveBlood/GiveBlood";
 import DonationHelps from "../Page/Home/DonationConfusion/DonationHelps/DonationHelps";
+import MyDonation from "../Components/Dashboard/Donor/MyDonation/MyDonation";
+import DashboradLayout from "../Layout/MainLayout/DashboradLayout";
+import WantDonor from "../Components/Dashboard/Donor/WantDonor/WantDonor";
+import Profile from "../Components/Dashboard/Donor/Profile/Profile";
 
 
 
@@ -49,6 +53,22 @@ const router = createBrowserRouter([
 
             }
 
+        ]
+    },
+    {
+        path: 'dashboard',
+        element: <DashboradLayout></DashboradLayout>,
+        children: [
+            {
+                path:'my-donation',
+                element : <MyDonation></MyDonation>
+            },{
+                path : 'want-to-be-donor',
+                element : <WantDonor></WantDonor>
+            },{
+                path : 'profile',
+                element: <Profile></Profile>
+            }
         ]
     }
 ])

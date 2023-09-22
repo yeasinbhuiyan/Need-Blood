@@ -46,6 +46,9 @@ const NavigationBar = () => {
                             </details>
                         </li>
                         <li><a>Item 3</a></li>
+                        <li>
+                            <NavLink to={'/dashboard/my-donation'} className={({ isActive }) => isActive ? 'text-red font-semibold' : ''}>Dashboard</NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
