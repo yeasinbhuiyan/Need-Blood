@@ -28,3 +28,7 @@
     padding: 10px;
     border: 1px solid gray;
 }
+
+.select_drop{
+    flex : 16;
+}

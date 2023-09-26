@@ -5,8 +5,6 @@ import { AiOutlinePlus } from 'react-icons/ai';
 
 const Profile = () => {
     return (
-
-
         <>
             {/* <div className='relative shadow-xl  h-[550px] rounded-xl overflow-hidden'>
                 <div className='absolute w-full h-full' >
