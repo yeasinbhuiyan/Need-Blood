@@ -12,6 +12,7 @@ import MyDonation from "../Components/Dashboard/Donor/MyDonation/MyDonation";
 import DashboradLayout from "../Layout/MainLayout/DashboradLayout";
 import WantDonor from "../Components/Dashboard/Donor/WantDonor/WantDonor";
 import Profile from "../Components/Dashboard/Donor/Profile/Profile";
+import CreateProfile from "../Components/Dashboard/Donor/CreateProfile/CreateProfile";
 
 
 
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
             },{
                 path : 'profile',
                 element: <Profile></Profile>
+            },
+            {
+                path :'create-profile',
+                element : <CreateProfile></CreateProfile>
             }
         ]
     }

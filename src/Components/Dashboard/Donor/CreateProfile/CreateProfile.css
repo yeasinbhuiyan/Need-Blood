@@ -1,0 +1,30 @@
+
+.create_profile form{
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    /* width: 50%; */
+    margin: auto;
+}
+
+.create_profile_common{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create_profile_common label {
+    flex : 4;
+    font-weight: 600;
+    font-size: 20px;
+    /* background-color: yellowgreen; */
+}
+
+.create_profile_common input {
+    flex : 16;
+    /* background-color: yellow; */
+    padding: 10px;
+    border: 1px solid gray;
+}
