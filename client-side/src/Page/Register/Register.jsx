@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 import './Register.css'
+import axios from 'axios'
 const Register = () => {
     const { register, watch, reset, formState: { errors }, handleSubmit } = useForm()
 
@@ -10,6 +11,45 @@ const Register = () => {
         const profile = data.image[0]
         const password = data.confirmPassword
         console.log(name, email, password, profile)
+
+
+
+        const formData = new FormData();
+        formData.append('file', profile);
+
+        axios.post('http://localhost:5050/profile-upload', formData)
+            .then(imgData => {
+
+                console.log(imgData)
+
+                const userDetails = {
+                    name,
+                    email,
+                    profile : imgData?.data?.filename,
+                    password,
+                    status: 'member'
+                }
+
+                axios.post('http://localhost:5050/create-user', userDetails)
+                    .then(userData => {
+                        console.log(userData?.data)
+                    })
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+
+
+
+
+
+        console.log(profile)
+
+
+
+
+
     }
 
 

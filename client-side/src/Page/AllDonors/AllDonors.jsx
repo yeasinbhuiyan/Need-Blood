@@ -86,7 +86,6 @@ const AllDonors = () => {
                 // const allResult = data.filter(df=> df.district == 'All')
 
                 // console.log(result , 'result')
-                console.log(result, data, selectValue);
               
                 if(result.length > 0 ){
                     console.log('select')
@@ -106,7 +105,7 @@ const AllDonors = () => {
                   
 
                 }
-                // console.log(data ,selectValue)
+        
             })
     }, [selectValue])
 
@@ -123,7 +122,6 @@ const AllDonors = () => {
     return (
         <div className="py-16">
 
-
             <SectionTitle heading={"  Our All Donors "} />
 
             <select onChange={(e)=>handleSelectValue(e.target.value)} className="selector md:p-1  modifiedSelect" name="cars" id="cars">
@@ -132,7 +130,6 @@ const AllDonors = () => {
                         {district.name}</option>))
                 }
             </select>
-
 
             <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  mx-auto gap-10 px-10 my-10">
 
@@ -145,7 +142,7 @@ const AllDonors = () => {
 
                     donors.map(donarDetails => <Card key={donarDetails._id} donarDetails={donarDetails}></Card>)
                 }
-               {donors.length < 1 && <p id="notFound" className="text-center  font-7xl text-red-600 font-semibold">Not Found</p>}
+               {donors.length < 1 && <p id="notFound" className="text-center items-center flex justify-center text-5xl text-red-600 font-semibold">Not Found</p>}
 
             </div>
 
