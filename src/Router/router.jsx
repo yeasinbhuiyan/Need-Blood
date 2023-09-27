@@ -13,6 +13,9 @@ import DashboradLayout from "../Layout/MainLayout/DashboradLayout";
 import WantDonor from "../Components/Dashboard/Donor/WantDonor/WantDonor";
 import Profile from "../Components/Dashboard/Donor/Profile/Profile";
 import CreateProfile from "../Components/Dashboard/Donor/CreateProfile/CreateProfile";
+import DonatedBlood from "../Components/Dashboard/Donor/DonatedBlood/DonatedBlood";
+import Register from "../Page/Register/Register";
+import Login from "../Page/Login/Login";
 
 
 
@@ -52,6 +55,14 @@ const router = createBrowserRouter([
                 path: '/donationHelps',
                 element: <DonationHelps />
 
+            },
+            {
+                path: '/register',
+                element : <Register/>
+            },
+            {
+                path: '/login',
+                element : <Login/>
             }
 
         ]
@@ -61,18 +72,22 @@ const router = createBrowserRouter([
         element: <DashboradLayout></DashboradLayout>,
         children: [
             {
-                path:'my-donation',
-                element : <MyDonation></MyDonation>
-            },{
-                path : 'want-to-be-donor',
-                element : <WantDonor></WantDonor>
-            },{
-                path : 'profile',
+                path: 'my-donation',
+                element: <MyDonation></MyDonation>
+            }, {
+                path: 'want-to-be-donor',
+                element: <WantDonor></WantDonor>
+            }, {
+                path: 'profile',
                 element: <Profile></Profile>
             },
             {
-                path :'create-profile',
-                element : <CreateProfile></CreateProfile>
+                path: 'create-profile',
+                element: <CreateProfile></CreateProfile>
+            },
+            {
+                path: 'donated-blood',
+                element: <DonatedBlood></DonatedBlood>
             }
         ]
     }
