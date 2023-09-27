@@ -1,0 +1,17 @@
+
+
+
+.register-btn{
+    background: var(--red-color);
+    padding: 10px 8px;
+    border-radius: 4px;
+    color: whitesmoke;
+
+}
+.register-btn:hover{
+    background: var(--hover-red-color);
+    padding: 10px 8px;
+    border-radius: 4px;
+    color: whitesmoke;
+
+}

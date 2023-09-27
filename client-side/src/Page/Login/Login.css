@@ -1,0 +1,15 @@
+
+.login_btn{
+    background: var(--red-color);
+    padding: 10px 8px;
+    border-radius: 4px;
+    color: whitesmoke;
+
+}
+.login_btn:hover{
+    background: var(--hover-red-color);
+    padding: 10px 8px;
+    border-radius: 4px;
+    color: whitesmoke;
+
+}

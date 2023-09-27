@@ -3,6 +3,7 @@
 @tailwind utilities;
 :root{
     --red-color : #ed193b;
+    --hover-red-color : #cb1331;
 }
 .text-red{
     color: #ed193b;
