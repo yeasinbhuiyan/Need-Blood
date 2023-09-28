@@ -116,6 +116,41 @@ app.post('/create-user', async (req, res) => {
     connection.release()
 })
 
+app.post('/match-login', async (req, res) => {
+    try {
+        const connection = await pool.getConnection();
+        const { email, password } = req.body;
+
+        const query = `SELECT * from users WHERE email ='${email}'`;
+        const [results] = await connection.query(query, [email]);
+   
+        if (results.length === 0) {
+            console.log('User not found');
+            res.status(401).json({ error: 'User not found' });
+        } else {
+            const hashedPassword = results[0].password_hash;
+   
+            // Compare the provided password with the stored hashed password
+            try {
+                const passwordMatch = await bcrypt.compare(password, hashedPassword);
+
+                if(passwordMatch){
+                    console.log(query)
+                    res.send(results)
+                }
+                else{
+                    res.send({error: true})
+                }
+              
+            } catch (error) {
+                res.status(500).json({ error: 'Internal server error' });
+            }
+        }
+        connection.release();
+    } catch (error) {
+        console.error('Server Error');
+    }
+});
 
 app.get('/get-email/:email', async (req, res) => {
     const connection = await pool.getConnection()

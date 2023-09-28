@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 import './Login.css'
+import axios from 'axios';
 
 const Login = () => {
     const { register, reset, formState: { errors }, handleSubmit } = useForm()
@@ -8,8 +9,25 @@ const Login = () => {
     const onSubmit = (data) => {
         const email = data.email
         const password = data.password
+        const userDetails = {
+            email,
+            password
+        }
 
-        console.log( email, password)
+        axios.post('http://localhost:5050/match-login', userDetails)
+            .then(loginUser => {
+                console.log(loginUser?.data[0])
+                if(loginUser?.data[0]){
+                    
+                    localStorage.setItem(JSON.stringify('user' , loginUser?.data[0]))
+                }
+                else{
+                    alert('This is not valid Password')
+                }
+            })
+            .catch((error) => {
+                alert('Something Is Wrong Please Try Again')
+            })
     }
 
     return (
