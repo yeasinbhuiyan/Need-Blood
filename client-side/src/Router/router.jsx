@@ -16,6 +16,7 @@ import CreateProfile from "../Components/Dashboard/Donor/CreateProfile/CreatePro
 import DonatedBlood from "../Components/Dashboard/Donor/DonatedBlood/DonatedBlood";
 import Register from "../Page/Register/Register";
 import Login from "../Page/Login/Login";
+import MemberPrivateRoute from "./PrivateRoute/memberPrivateRoute";
 
 
 
@@ -58,18 +59,18 @@ const router = createBrowserRouter([
             },
             {
                 path: '/register',
-                element : <Register/>
+                element: <Register />
             },
             {
                 path: '/login',
-                element : <Login/>
+                element: <Login />
             }
 
         ]
     },
     {
         path: 'dashboard',
-        element: <DashboradLayout></DashboradLayout>,
+        element: <MemberPrivateRoute><DashboradLayout></DashboradLayout></MemberPrivateRoute>,
         children: [
             {
                 path: 'my-donation',
