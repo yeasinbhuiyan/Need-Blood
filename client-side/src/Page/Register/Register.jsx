@@ -10,46 +10,57 @@ const Register = () => {
         const email = data.email
         const profile = data.image[0]
         const password = data.confirmPassword
-        console.log(name, email, password, profile)
-
-
+       
 
         const formData = new FormData();
         formData.append('file', profile);
 
-        axios.post('http://localhost:5050/profile-upload', formData)
-            .then(imgData => {
 
-                console.log(imgData)
+        axios(`http://localhost:5050/get-email/${email}`)
+            .then(getEmail => {
 
-                const userDetails = {
-                    name,
-                    email,
-                    profile : imgData?.data?.filename,
-                    password,
-                    status: 'member'
+                if (getEmail?.data[0]?.email) {
+                    alert('This email Already Exist')
                 }
+                else{
 
-                axios.post('http://localhost:5050/create-user', userDetails)
-                    .then(userData => {
-                        console.log(userData?.data)
+                    axios.post('http://localhost:5050/profile-upload', formData)
+                    .then(imgData => {
+        
+                        const userDetails = {
+                            name,
+                            email,
+                            profile: imgData?.data?.filename,
+                            password,
+                            status: 'member'
+                        }
+        
+                        axios.post('http://localhost:5050/create-user', userDetails)
+                            .then(userData => {
+        
+                                if (userData?.data?.email) {
+                                    // console.log(userData?.data)
+                                    alert('Successfully Created Your Account')
+                                    console.log(userData?.data)
+                                    localStorage.setItem('user', JSON.stringify(userData?.data))
+        
+                                }
+                                else {
+                                    alert('This email Already Added')
+                                }
+                            })
                     })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+
+                }
             })
             .catch((error) => {
                 console.log(error)
             })
 
-
-
-
-
-
-        console.log(profile)
-
-
-
-
-
+    
     }
 
 

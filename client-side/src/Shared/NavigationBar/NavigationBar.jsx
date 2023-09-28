@@ -1,9 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 
 const NavigationBar = () => {
+    const user = 'user'
+
+    const handleLogOut = () => {
+
+    }
+
     return (
-        <div className=" pb-20 md:pb-16">
-            <div className="navbar z-20 bg-white shadow-md text-gray-500  fixed">
+        <div className=" pb-20 md:pb-16 ">
+            <div className="navbar z-20 max-w-7xl bg-white shadow-md text-gray-500  fixed">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +58,11 @@ const NavigationBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                      user ? <Link className="cursor-pointer px-5 text-white py-2 bg-red-700" to={'/login'}><button>Login</button></Link>
+                      :
+                      <button onClick={handleLogOut}>Logout</button>
+                    }
                 </div>
             </div>
         </div>

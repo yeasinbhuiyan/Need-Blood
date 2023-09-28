@@ -62,7 +62,7 @@ app.post('/profile-upload', upload.single('file'), (req, res) => {
 
 app.post('/create-user', async (req, res) => {
     const connection = await pool.getConnection()
-    const { name, password, email, profile , status } = req?.body;
+    const { name, password, email, profile, status } = req?.body;
 
     // console.log(name,password,email,profile,status)
     // check email  
@@ -85,6 +85,17 @@ app.post('/create-user', async (req, res) => {
             status
         ]
 
+
+        const userDetailsSet = {
+            name,
+            email,
+            code: hashedPassword,
+            profile,
+            status
+        }
+
+
+
         const response = await connection.query(query, userDetails, (error, results) => {
             if (error) {
                 res.status(500).send({ error: 'Internal server error' });
@@ -93,7 +104,7 @@ app.post('/create-user', async (req, res) => {
             }
         });
 
-        res.send(response)
+        res.send(userDetailsSet)
 
     } else {
 
@@ -105,6 +116,22 @@ app.post('/create-user', async (req, res) => {
     connection.release()
 })
 
+
+app.get('/get-email/:email', async (req, res) => {
+    const connection = await pool.getConnection()
+    const email = req?.params.email
+
+    console.log(email)
+    const [rows] = await connection.query(`SELECT email from users WHERE email='${email}'`)
+    console.log(rows) 
+    if(rows[0]){
+         res.send(rows)
+    }else{
+        res.send({error: true})
+    }
+
+    connection.release()
+})
 
 
 app.listen(port, () => {

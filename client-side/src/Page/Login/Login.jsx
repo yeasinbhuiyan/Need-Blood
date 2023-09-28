@@ -45,7 +45,7 @@ const Login = () => {
                                 </button>
                             </div>
 
-                            <p><small>Dont you have Account? <Link className='font-semibold' to='/register'>Login</Link></small></p>
+                            <p><small>Dont you have Account? <Link className='font-semibold' to='/register'>Register</Link></small></p>
 
                         </div>
                     </div>
