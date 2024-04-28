@@ -70,7 +70,10 @@ const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <MemberPrivateRoute><DashboradLayout></DashboradLayout></MemberPrivateRoute>,
+        element: 
+        // <MemberPrivateRoute>,
+            <DashboradLayout></DashboradLayout>,
+            /* </MemberPrivateRoute>, */
         children: [
             {
                 path: 'my-donation',
